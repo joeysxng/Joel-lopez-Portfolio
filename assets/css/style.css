@@ -66,7 +66,7 @@ header nav ul li a:hover {
 /* HEADER / NAVBAR STYLES END */
 
 .hero {
-    background-image: url('../images/background.jpg');
+    background-image: url(../images/background.jpg);
     background-size: contain;
     display: flex;
     justify-content: center;
@@ -76,9 +76,12 @@ header nav ul li a:hover {
     background-position: 80%;
 }
 
-
 /* ABOUT ME SECTION START */
 
-.about-me p {
+.intro h2 {
+    color: #dc143c;
+}
+
+.intro p {
     text-align: center;
 }
