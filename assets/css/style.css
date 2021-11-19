@@ -13,7 +13,7 @@ body {
 
 header {
     padding: 20px 35px;
-    background-color: #ededf6;
+    background-color: #191970;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@ header a {
 header nav {
     margin: 7px 0;
 }
-  
+
 header nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +48,7 @@ header nav ul {
     align-items: center;
     list-style: none;
 }
-  
+
 header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
@@ -66,22 +66,117 @@ header nav ul li a:hover {
 /* HEADER / NAVBAR STYLES END */
 
 .hero {
-    background-image: url(../images/background.jpg);
-    background-size: contain;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    background-attachment: fixed;
-    background-position: 80%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.hero div {
+    background-color: #ffffff59;
+    padding: 5px 20px;
+    margin: 5px;
+    color: #024e76;
+}
+
+.hero-img-1 {
+    background-image: url("../images/background-img.jpg");
+}
+
+
+/* Clear floats after the columns */
+
+.columns {
+    display: flex;
+    margin: 15px 0px;
+}
+
+.columns > :first-child {
+    width: 40%;
+    border-right: 6px solid crimson;
+    color: crimson;
+    padding: 30px 20px 20px 5px;
+    text-align: right;
+}
+
+.columns > :last-child {
+    padding: 30px 20px 20px 20px;
+    width: 60%;
 }
 
 /* ABOUT ME SECTION START */
 
-.intro h2 {
+.intro p {
     color: #dc143c;
 }
 
 .intro p {
     text-align: center;
+}
+
+/* ABOUT ME SECTION ENDS */
+
+
+/* MY WORK SECTION STARTS */
+
+.project-runbuddy {
+    background-image: url("../images/Run-buddy-pic.png");
+    background-position: top;
+}
+
+/* MY WORK SECTION ENDS */ 
+
+
+
+/*MEDIA QUERY FOR REGULAR DESKTOPS*/
+@media screen and (min-width: 992px) {
+    .columns p {
+        font-size: 18px;
+    }
+}
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS */
+@media screen and (min-width: 768px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
+    }
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
+    }
+  
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
+    }
+  
+    header nav ul li a {
+      font-size: 20px;
+    }
+}
+
+/* Screens smaller than 767px */
+@media screen and (max-width: 767px) {
+    header {
+    display: block;
+    }
+
+    header nav ul li a {
+        font-size: 2.8vw;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    p, address {
+        font-size: 13px;
+    }
 }
